@@ -13,6 +13,8 @@ int main()
 
 	int ListNumber = 0;
 	int nEnter = 0;
+    
+    int SaraLoveGage = 0;
 
 
 	/*
@@ -480,7 +482,95 @@ int main()
 			}
 			cout << "(아무 숫자나 입력하고 Enter를 눌러서 진행)";
 			cin >> nEnter;
-			cout << "안에는 어린 여자아이가 있었다."
+            cout << endl << endl;
+            
+            /*
+            안에는 금발의 소녀가 있었다.
+            소녀는 겁에 질린 듯한 표정을 짓고 있었다.
+            소녀는 덜덜 떨며 당신을 바라보았다.
+            */
+			cout << "안에는 금발의 소녀가 있었다." << endl;
+            cout << "소녀는 겁에 질린 듯한 표정을 짓고 있었다." << endl;
+            cout << "소녀는 덜덜 떨며 당신을 바라보았다." << endl << endl;
+
+
+            //기사의 경우
+            /*
+            당신은 당황했다.
+            이런 어린 아이만 살아남고 전부 죽은 걸까?
+            당신은 이 어린 아이가 얼마나 힘든 일을 겪었을지 예상할 수 있었다.
+
+            당신은 그녀가가 놀라지 않도록 천천히 손을 내밀었다.
+
+            "누, 누구세요?"
+
+            그녀가 놀라지 않도록 조심스럽게 대답하는 것이 좋을 것이다.
+            어떻게 대답할까?
+            1. 구하러 왔습니다.
+            2. 길 가던 기사입니다. 도대체 무슨 일이 일어난 거죠, 아가씨?
+            */
+           switch (nJob)
+           {
+               case 1:
+               cout << "당신은 당황했다." << endl;
+               cout << "이런 어린 아이만 살아남고 전부 죽은 걸까?" << endl;
+               cout << "당신은 이 어린 아이가 얼마나 힘든 일을 겪었을지 예상할 수 있었다." << endl << endl;
+
+               cout << "당신은 그녀가가 놀라지 않도록 천천히 손을 내밀었다." << endl << endl;
+
+               cout << "<???: 누, 누구세요?>" << endl << endl;
+
+               cout << "그녀가 적대하지 않도록 조심스럽게 대답하는 것이 좋을 것이다." << endl;
+               cout << "어떻게 대답할까?" << endl;
+               cout << "1. 구하러 왔습니다, 아가씨." << endl;
+               cout << "2. 길 가던 기사입니다. 도대체 여기에서 무슨 일이 일어난 거죠?" << endl << endl;
+               cout << ": ";
+
+               int ListNumber3 == 1;
+
+               cin >> ListNumber3;
+               cout << endl;
+               int nLeft1 = 0;
+               nLeft1 = ListNumber3 % 2;
+
+               switch(nLeft1)
+               {
+                   case 1:
+                   cout << "선택: 1. 구하러 왔습니다, 아가씨." << endl;
+                   cout << "<???: 누, 누구세요? 저는 당신이 누군지 몰라요.>" << endl;
+                   SaraLoveGage--;
+                   if (SaraLoveGage < -10)
+                   {
+                       cout << "GAME OVER";
+                       return 0;
+                   }
+                   break;
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+                   case 0:
+                   cout << "선택: 2. 길 가던 기사입니다. 도대체 여기에서 무슨 일이 일어난 거죠?" << endl;
+                   break;
+               }
+               case 2:
+               break;
+               case 3:
+               break;
+               case 4:
+               break;
+           }
+
+
 		}
 		break;
 		case 2://소리난 곳 확인 안함
