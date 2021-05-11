@@ -8,7 +8,7 @@ int main()
 	int nNumber[24];//24개의 nNumber 변수들
 	int nInsideNumber = 0;//[] 안에 들어가는 숫자
 	int nLineNumber = 0;//현재 줄에 몇 개의 글자가 들어갔는가?
-	int nInsideNumPlus = 0;//nLineNumber + 1
+	int nInsideNumPlus = 0;//nInsideNumber + 1
 
 
 	nInsideNumber = 0;
@@ -21,9 +21,9 @@ int main()
 	{
 		if (nLineNumber < 6)//만약 현재 줄에 있는 글자 수가 6보다 작다면
 		{
-			cout << nInsideNumPlus;//nLineNumber + 1 출력
+			cout << nInsideNumPlus;//nInsideNumber + 1 출력
 			cout << "\t";//tab 키 누르기
-			nLineNumber++;//LineNumber + 1
+			nLineNumber++;//InsideNumber + 1
 		}
 		else if (nLineNumber == 6)//만약 현재 줄 글자 수가 6이 된다면
 		{
