@@ -1,32 +1,32 @@
-#include <iostream>
-#include "time.h"
-
-using namespace std;
-
-int main()
+셔플을 돌리고
+0 ~ 번 방까지 있는 애들만 사용하면
+9개짜리 배열을 만든 다음에
+{
+    int Number[9];
+}
+1 ~ 9까지 숫자를 넣어
+{
+    int i;
+    for (i = 0; i < 9; i++)//i = 0 ~ 8까지 9번이 돈다.
+    {
+        Number[i] = i + 1;
+    }
+}
+셔플을 돌리자
 {
     srand(time(NULL));
 
-    int i, j;
-
-    int Number[9];//숫자들: Number[0] ~ Number[지정한 숫자 - 1]
-    int Dest;//도착
-    int Sour;//출발
-    int Temp;//임시
-
-    for (i = 0; i < 500/*아무 숫자나 가능(몇 번 섞을 것인가?*/; i++)
+    for(i = 0; i < 1; i++)
     {
-        /*Dest --> Temp, Sour --> Dest, Temp --> Sour*/
-
-        Dest = rand() % 9/*위의 Number[]변수에서 대괄호 안에 넣은 숫자*/;
-        sour = rand() % 9/*위의 Number[]변수에서 대괄호 안에 넣은 숫자*/;
-        Temp = 0;//임시값이기 때문에 딱히 아무것도 넣을 필요 없음
+        int Dest, Sour;
+        int Temp;//임시
+        Dest = rand() % 9;
+        Sour = rand() % 9;
 
         Temp = Number[Dest];
         Number[Dest] = Number[Sour];
         Number[Sour] = Temp;
     }
 
-
-    return 0;
+    //유저에게 공개할 것이 아니기 때문에 공개 X
 }
