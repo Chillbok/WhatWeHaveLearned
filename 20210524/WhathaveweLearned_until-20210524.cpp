@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void Continue_Chapter()
+void Continue_Chapter()//계속
 {
   cout << "Enter를 눌러서 계속" << endl << endl;
   system("pause");
@@ -54,7 +54,7 @@ void Input_in_C()//C에서의 입력
   printf("%d", num);
 }
 
-void Input_in_Cpp()
+void Input_in_Cpp()//Cpp에서 입출
 {
   /*
   C++에서의 출력: cout <<
@@ -73,12 +73,52 @@ void Input_in_Cpp()
 
 int main()
 {
-  C_and_Cpp_both();
-  Continue_Chapter();
-  Input_in_C();
-  Continue_Chapter();
-  Input_in_Cpp();
-  Continue_Chapter();
+  int ChapterNumber = 0;
+  string ContinueOrStop = 0;
+  for(;;)
+  {
+    ChapterNumber = 0;
+
+    cout << "출력할 챕터를 고르세요" << endl << endl;
+    cout << "1. C와 C++에서 공통" << endl;
+    cout << "2. C에서 입출력 사용" << endl;
+    cout << "3. C++에서 입출력 사용" << endl;
+
+    cout << "선택은?" << endl;
+    cout << "--> ";
+    cin >> ChapterNumber;
+    if (ChapterNumber = 1)
+    {
+      C_and_Cpp_both();
+    }
+    else if (ChapterNumber = 2)
+    {
+      Input_in_C();
+    }
+    else if (ChapterNumber = 3)
+    {
+      Input_in_Cpp();
+    }
+    else
+    {
+      cout << "번호를 잘못 입력하셨습니다. 다시 입력하세요.";
+      system("cls");
+      continue;
+    }
+
+    system("cls");
+    cout << "다른 챕터도 학습하시겠습니까?" << endl;
+    cout << "네 또는 아니요를 입력해주세요:" << endl;
+    cin >> ContinueOrStop;
+    if (ContinueOrStop = "네" || ContinueOrStop = "sp")
+    {
+      continue;
+    }
+    else if (ContinueOrStop = "아니요" || ContinueOrStop = "아니오" || ContinueOrStop = "dksldy" || ContinueOrStop = "dksldh")
+    {
+      break;
+    }
+  }
 
   return 0;
 }
