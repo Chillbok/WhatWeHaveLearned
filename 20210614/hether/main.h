@@ -2,6 +2,6 @@
 
 #include <iostream>
 #include <string>
-#include "windows.h"
-#include <time.h>
+#include "CLT.h"
+
 using namespace std;
