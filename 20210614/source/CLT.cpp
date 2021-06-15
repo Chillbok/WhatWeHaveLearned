@@ -1,54 +1,42 @@
 #include "CLT.h"
-
 //클래스에 작성된 함수는 main.cpp의 main 함수에서 호출한다.
 
-
+char chStar[6] = "*****";
+char chSpace[5] = "    ";
+int i, j = {};
 
 void CLT::PrintLT()
 {
-    //여기에서 LT패턴 입출력
-    int i, j = {};
-    char nStar[6] = "*****";
-    char nSpace[5] = "    ";
-
-    for (i = 0; i < 5; i++)
-    {
-        cout << &nStar[4 - i];
-        cout << endl;
-    }
+	for (i = 0; i < 5; i++)
+	{
+		cout << &chStar[4 - i];
+		cout << endl;
+	}
 }
 
 void CLT::PrintLB()
 {
-    int i, j = {};
-    char nStar[6] = "*****";
-    char nSpace[5] = "    ";
-    for (i = 0; i < 5; i++)
-    {
-        cout << &nStar[i] << endl;
-    }
+	for (i = 0; i < 5; i++)
+	{
+		cout << &chStar[i];
+		cout << endl;
+	}
 }
 
 void CLT::PrintRT()
 {
-    int i, j = {};
-    char nSpace[5] = "    ";
-    char nStar[6] = "*****";
-
-    for (i = 0; i < 5; i++)
-    {
-        cout << &nSpace[i] << &nStar[4 - i] << endl;
-    }
+	for (i = 0; i < 5; i++)
+	{
+		cout << &chSpace[i] << chStar[4 - i];
+		cout << endl;
+	}
 }
 
 void CLT::PrintRB()
 {
-    int i, j = {};
-    char nSpace[5] = "    ";
-    char nStar[6] = "*****";
-
-    for (i = 0; i < 5; i++)
-    {
-        cout << &nSpace[4 - i] << &nStar[i] << endl;
-    }
+	for (i = 0; i < 5; i++)
+	{
+		cout << &chSpace[4 - i] << chStar[i];
+		cout << endl;
+	}
 }
