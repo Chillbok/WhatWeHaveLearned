@@ -13,7 +13,7 @@ set history=100
 set sm
 set ru
 set si
-colorscheme pablo
+colorscheme industry
 set backspace=indent,eol,start
 set nobackup
 set incsearch
@@ -22,3 +22,5 @@ set nocompatible
 set encoding=cp949
 set fileencodings=utf-8,cp949
 set langmenu=cp949
+
+set clipboard=unnamed
