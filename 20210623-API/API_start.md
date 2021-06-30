@@ -104,7 +104,7 @@ LineTo(BackDC, 200,100);//끝점 위치 선언하는 함수
 
 <br>
 
-## `hpen`
+## `HPEN`
 
 ---
 
@@ -113,6 +113,17 @@ LineTo(BackDC, 200,100);//끝점 위치 선언하는 함수
 HPEN MyPen, OldPen;
 MyPen = CreatePen(PS_DASHDOTDOT, 5, RGB(255,-,-));
 OldPen = (HPEN)SelectObject(BackDC, MyPen);
+```
+
+<br>
+
+## `HFONT`
+
+---
+
+```C++
+HFONT MyFont, OldFont;
+MyFont = CreateFont();
 ```
 
 <br>
